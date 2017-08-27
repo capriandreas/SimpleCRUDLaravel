@@ -20,6 +20,7 @@ class Todolist extends Migration
             $table->string('complete', 10);
             $table->dateTime('duedate');
             $table->string('notes', 200)->nullable();
+            $table->timestamps();
         });
     }
 
