@@ -14,6 +14,9 @@ To Do List
 	<th>Complete</th>
 	<th>Due Date</th>
 	<th>Notes</th>
+	<th>Detail</th>
+	<th>Edit</th>
+	<th>Delete</th>
 </tr>
 </thead>
 <tbody>
@@ -25,6 +28,11 @@ To Do List
 			<td>{{$a->complete}}</td>
 			<td>{{$a->duedate}}</td>
 			<td>{{$a->notes}}</td>
+
+			<td><a href="{{ url('todo/'.$a->id) }}" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></td>
+			<td><a href="{{ url('todo/'.$a->id.'/edit') }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></td>
+			<td><a href="{{ url('todo/'.$a->id) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></td>
+
 		</tr>
 	@endforeach
 
