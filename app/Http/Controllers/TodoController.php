@@ -38,4 +38,9 @@ class TodoController extends Controller
         Todolist::find($id)->update($request->all());
         return redirect('todo');
     }
+
+    public function destroy($id){
+        Todolist::find($id)->delete();
+        return redirect('todo');
+    }
 }
